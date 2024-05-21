@@ -1,0 +1,30 @@
+[
+    {
+        "id":1,
+        "name":"Diwakar Kumar",
+        "email":"diwakar@gmail.com",
+        "password":"diwakar@123",
+        "company":"simform",
+        "website":"https://www.google.com",
+        "country": "India",
+        "city": "Ahmedabad",
+        "address1": "south bopal",
+        "address2": "near antariksh colony",
+        "state": "Gujarat",
+        "zipcode": "380015"
+    },
+    {
+        "id":2,
+        "name":"Nimit Mandaviya",
+        "email":"nimit@gmail.com",
+        "password":"nimit@123",
+        "company":"simform",
+        "website":"https://www.google.com",
+        "country": "India",
+        "city": "Ahmedabad",
+        "address1": "south bopal",
+        "address2": "near antariksh colony",
+        "state": "Gujarat",
+        "zipcode": "380015"
+    }
+]
