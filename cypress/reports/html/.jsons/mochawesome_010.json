@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T07:06:36.215Z",
+    "end": "2024-05-22T07:06:40.368Z",
+    "duration": 4153,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "653f0b73-8af6-4483-acd7-16769485b0d5",
+      "title": "",
+      "fullFile": "cypress/integration/CypressByRahil/test3.js",
+      "file": "cypress/integration/CypressByRahil/test3.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3e757d2e-2a87-4826-b9ae-b38aecc608a8",
+          "title": "scrollintoview, scrollto",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "test cases",
+              "fullTitle": "scrollintoview, scrollto test cases",
+              "timedOut": null,
+              "duration": 1974,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.get('#box').click();\ncy.get('#box').dblclick(); // If you want double click on any particular element then you can use this\ncy.log(cy.url());",
+              "err": {},
+              "uuid": "65f861a9-20c8-49fa-af9d-5b45e44a8674",
+              "parentUUID": "3e757d2e-2a87-4826-b9ae-b38aecc608a8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "65f861a9-20c8-49fa-af9d-5b45e44a8674"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1974,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

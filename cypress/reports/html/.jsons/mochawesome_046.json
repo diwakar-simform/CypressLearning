@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-05-22T08:05:47.298Z",
+    "end": "2024-05-22T08:06:03.943Z",
+    "duration": 16645,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "63cd0989-bef2-477a-848e-e9ab3344ce50",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test5.js",
+      "file": "cypress/integration/examples/test5.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1e8905d4-523d-43d9-baa8-22fca7444292",
+          "title": "Automation Practice",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Alert",
+              "fullTitle": "Automation Practice Alert",
+              "timedOut": null,
+              "duration": 7213,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/examples/test5.js/Automation Practice -- Alert (failed).png\"\n    ],\n    [\n      \"/examples/test5.js/Automation Practice -- Alert (failed) (attempt 2).png\"\n    ]\n  ]\n}",
+              "code": "cy.viewport(1920, 1080);\ncy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\");\n// This below code will remove the target attribute from the anchor tag.\n// Because of that our page will open in the same page no new tab or window\ncy.get('#opentab').invoke('removeAttr', 'target').click();\n// Cypress only support current domain \n// If your domain get change while testing then cypress will start complaining it will not run test cases\n// In one word: Cross domain is not supported by Cypress\n// Not working : Because blocked site in the current network\n// cy.origin(\"https://www.qaclickacademy.com\", () => {\n//     cy.get(\"#navbarSupportContent a[href*='about']\").click();\n// })\n// Below code is dynamically changes the href value of the anchor tag and removing the target attribute from anchor tag\ncy.get('#opentab').invoke('attr', 'href', 'https://javatpoint.com').invoke('removeAttr', 'target').click();\n;\n// cy.go('back');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `#opentab`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `#opentab`, but never found it.\n    at Context.eval (cypress/integration/examples/test5.js:24:15)",
+                "diff": null
+              },
+              "uuid": "4c592b0b-6b20-4e45-a657-fa52991e77b4",
+              "parentUUID": "1e8905d4-523d-43d9-baa8-22fca7444292",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4c592b0b-6b20-4e45-a657-fa52991e77b4"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7213,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

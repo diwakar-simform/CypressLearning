@@ -92,10 +92,19 @@ module.exports = defineConfig({
     //   require('cypress-mochawesome-reporter/plugin')(on);
     // },
 
+    // screenshotOnRunFailure: true,// used to capture whenever any failure happens at run time
+    // screenshotsFolder:"./ss" // used to set the screent shot folder in headless mode
+    // video:true, // used to record video in headless mode
+    // videosFolder: "./records", // used to set the folder where you want to store your recorded videos
+    // requestTimeout: 4000, // used to set timeout for api requests
+    // defaultCommandTimeout: 6000, // used to wait for the specified time for the command
+    // pageLoadTimeout: 5000, // used to wait your page load time then throw error time out
+    chromeWebSecurity: false, // used to access website who doesn't have ssl(https) thing
     setupNodeEvents,
     // specPattern: "cypress/integration/*/BDD/*.feature"
-    specPattern: "cypress/integration/*/*.js"
-
+    specPattern: "cypress/integration/*/*.js",
+    // You can set base url for all
+    baseUrl:'https://www.lambdatest.com'
     
   },
 

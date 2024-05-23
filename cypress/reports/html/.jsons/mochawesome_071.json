@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T08:12:09.439Z",
+    "end": "2024-05-22T08:12:17.990Z",
+    "duration": 8551,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c53eee68-3c62-4326-92aa-df3cf88faa06",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test3.js",
+      "file": "cypress/integration/examples/test3.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0692d93f-10b6-4fa7-afda-d59b03f7cd5a",
+          "title": "Automation Practice",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "UI Web Controls",
+              "fullTitle": "Automation Practice UI Web Controls",
+              "timedOut": null,
+              "duration": 5778,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/test3.js\"\n}",
+              "code": "cy.viewport(1920, 1080);\ncy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\");\n// CHECKBOXES\n// For selection check boxes we use check();\n// You can use click() but for checkboxes check() is more reliable\ncy.get('#checkBoxOption1').check().should('be.checked');\ncy.get('#checkBoxOption2').check().should('be.checked');\n// cy.wait(2000);\n// If you want to call should multiple times you can use and it will consider same\ncy.get('#checkBoxOption3').check().should('be.checked').and('have.value', 'option3');\n// cy.wait(2000);\n// suppose If I want to uncheck() and check that it is unchecked\ncy.get('#checkBoxOption1').uncheck().should('not.be.checked');\n// Let's try to fail the above assertions\n// cy.get('#checkBoxOption1').uncheck().should('be.checked');\n// cy.wait(2000);\n// How to uncheck each at once\n// By using common propery we cna do so.\ncy.get('input[type=\"checkbox\"]').uncheck(['option2', 'option3']);\n// cy.wait(2000);\n// You can check each at once or selected \ncy.get('input[type=\"checkbox\"]').check(['option1', 'option2']);\n// cy.wait(2000);\ncy.get('input[type=\"checkbox\"]').check().should('be.checked');\n// STATIC DROP DOWNS\n// In get() method you can pass tagname or tagId and\n// In select() method you can pass particular value that you wanted to select \ncy.get('select').select('option1').should('have.value', 'option1');\n// DYNAMIC DROP DOWNS\n// You only need to give space to navigate from Parent to child : from input\ncy.get('#autocomplete').type('ind');\ncy.get('.ui-menu-item div').each(function ($el, index, $list) {\n  if ($el.text() === \"India\") {\n    cy.wrap($el).click();\n  }\n});\ncy.get('#autocomplete').should('have.value', 'India');\ncy.get('#autocomplete').clear().type('uni');\ncy.wait(2000); // We have given here wait time intentionally because when it was trying to fetch the typed data then\n// It was picking up the previous drop down because of the fast speed. So when we have put down wait time so in that dropdown \n//for new search got in the drop and hence select the appropriate option\ncy.get('.ui-menu-item div').each(function ($element, index, $list) {\n  cy.log($element.text());\n  if ($element.text() === \"United Kingdom (UK)\") {\n    cy.log(\"hello\");\n    cy.wrap($element).click();\n  }\n});\n// cy.get('#autocomplete').should('have.value','United Kingdom (UK)');\n// How to clear already filled in the input text : You can use clear() method\n// How to handle visible and invisible in cypress\ncy.get('#displayed-text').should('be.visible');\ncy.get('#hide-textbox').click();\ncy.get('#displayed-text').should('not.be.visible');\ncy.get('#show-textbox').click();\ncy.get('#displayed-text').should('be.visible');\n// Radio Button similar as Checkboxes\ncy.get('input[value=\"radio2\"]').check().should('be.checked');",
+              "err": {},
+              "uuid": "77f382be-a2f8-49ee-b3d6-365028f89895",
+              "parentUUID": "0692d93f-10b6-4fa7-afda-d59b03f7cd5a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Alert",
+              "fullTitle": "Automation Practice Alert",
+              "timedOut": null,
+              "duration": 561,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/test3.js\"\n}",
+              "code": "cy.viewport(1920, 1080);\ncy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\");\n// Cypress automatically handles alert and confirm by cliking on OK.\ncy.get('#alertbtn').click();\ncy.get('#confirmbtn').click();",
+              "err": {},
+              "uuid": "83b0dcae-a6f8-46e8-b109-2eb5b64f4ed0",
+              "parentUUID": "0692d93f-10b6-4fa7-afda-d59b03f7cd5a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "77f382be-a2f8-49ee-b3d6-365028f89895",
+            "83b0dcae-a6f8-46e8-b109-2eb5b64f4ed0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6339,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

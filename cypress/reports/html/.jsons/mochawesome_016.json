@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T07:07:24.239Z",
+    "end": "2024-05-22T07:07:24.521Z",
+    "duration": 282,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "213a5a76-3e59-4d29-a07c-d5df1c7019ed",
+      "title": "",
+      "fullFile": "cypress/integration/examples/APITest.js",
+      "file": "cypress/integration/examples/APITest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f6b0a2b3-46e9-4760-86be-a2febd2efa84",
+          "title": "Api Test Suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "API Test cases",
+              "fullTitle": "Api Test Suite API Test cases",
+              "timedOut": null,
+              "duration": 255,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request('POST', 'http://216.10.245.166/Library/Addbook.php', {\n  \"name\": \"Learn Appium automation with java\",\n  \"isbn\": \"bcdss\",\n  \"aisle\": \"22s7\",\n  \"author\": \"John doe\"\n}).then(function (response) {\n  expect(response.body).to.have.property(\"Msg\", \"successfully added\");\n  expect(response.status).to.eq(200);\n});",
+              "err": {},
+              "uuid": "1f3ac2c7-de32-4777-a5af-42ce63b51fd8",
+              "parentUUID": "f6b0a2b3-46e9-4760-86be-a2febd2efa84",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1f3ac2c7-de32-4777-a5af-42ce63b51fd8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 255,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T08:25:05.239Z",
+    "end": "2024-05-22T08:25:17.009Z",
+    "duration": 11770,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d119ccb4-b30a-4331-8f60-6d9577df37c8",
+      "title": "",
+      "fullFile": "cypress/integration/CypressByRahil/test2.js",
+      "file": "cypress/integration/CypressByRahil/test2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e3d6f236-e55a-49bc-b8b1-8c45ecce91ff",
+          "title": "selenium-playground",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "input-form-demo",
+              "fullTitle": "selenium-playground input-form-demo",
+              "timedOut": null,
+              "duration": 7671,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/CypressByRahil/test2.js\"\n}",
+              "code": "cy.visit('https://ecommerce-playground.lambdatest.io/');\ncy.wait(2000);\ncy.reload(); // is used to reload your \ncy.wait(2000);\ncy.log(cy.title());\ncy.title().then(function (webTitle) {\n  cy.log(webTitle);\n});\ncy.log(\"Diwakar\");\n// first is a function to get the first element required value\n// find() is used to get the sub element \n// Note: You can not use cy.find() directly and we can use this find as much as we can\ncy.get('h4.title').first().find('a').then(function (txt) {\n  cy.log(txt.text());\n});\n// we can use eq(1) to get the particul element : eq()\n// should is assertions\n// forEach loop, eql(), expect\n// What to do with shadow elements?",
+              "err": {},
+              "uuid": "6b296734-c203-4b07-b1b5-c195ed7d2a24",
+              "parentUUID": "e3d6f236-e55a-49bc-b8b1-8c45ecce91ff",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6b296734-c203-4b07-b1b5-c195ed7d2a24"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7671,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

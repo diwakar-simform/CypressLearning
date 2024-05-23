@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T07:06:11.765Z",
+    "end": "2024-05-22T07:06:21.769Z",
+    "duration": 10004,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "acf3853f-95bd-4dcb-99c4-acb8617df92a",
+      "title": "",
+      "fullFile": "cypress/integration/CypressByRahil/test1.js",
+      "file": "cypress/integration/CypressByRahil/test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6c266b65-34d6-4202-a5ee-870144cd5219",
+          "title": "selenium-playground",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "input-form-demo",
+              "fullTitle": "selenium-playground input-form-demo",
+              "timedOut": null,
+              "duration": 7763,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.lambdatest.com/selenium-playground/input-form-demo');\n// cy.url().should('equal','https://www.lambdatest.com/selenium-playground/input-form-demo');\n// // cy.url().should('have.value','https://www.lambdatest.com/selenium-playground/input-form-demo');\n// cy.url().should('equal','https://www.lambdatest.com/selenium-playground/input-form-demo');\n// cy.log(cy.url());\n// cy.get('#name').type('Diwakar Kumar');\n// cy.get('#inputEmail4').type('diwakar@gmail.com');\n// cy.get('#inputPassword4').type('diwakar@123');\n// cy.get('#company').type('Simform');\n// cy.get('#websitename').type('https://www.simformsolutions.com');\n// cy.get('[name=\"country\"]').select('India');\n// cy.get('#inputCity').type('Ahmedabad');\n// cy.get('#inputAddress1').type('501 Binori Bsquare 2');\n// cy.get('#inputAddress2').type('Antariksh Colony');\n// cy.get('#inputState').type('Gujarat');\n// cy.get('#inputZip').type(\"380015\");\n// cy.get('button[type=\"submit\"]').last().click();\n// cy.contains('Thanks for contacting us, we will get back to you shortly.').should('be.visible');\ncy.wait(2000);\ncy.reload();\ncy.wait(2000);\ncy.log(cy.title());\ncy.title().then(function (webTitle) {\n  cy.log(webTitle);\n});\ncy.log(\"Diwakar\");",
+              "err": {},
+              "uuid": "2fe17ea2-192d-444a-8791-1efc9d8b3829",
+              "parentUUID": "6c266b65-34d6-4202-a5ee-870144cd5219",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2fe17ea2-192d-444a-8791-1efc9d8b3829"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7763,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

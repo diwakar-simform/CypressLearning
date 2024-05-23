@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T07:07:12.173Z",
+    "end": "2024-05-22T07:07:18.465Z",
+    "duration": 6292,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "40c2020e-28e8-4f2f-897a-2ec09f2e7cb9",
+      "title": "",
+      "fullFile": "cypress/integration/GreenKart/test2.js",
+      "file": "cypress/integration/GreenKart/test2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "322391e1-3689-4fcc-a49f-112735d42cd8",
+          "title": "Green Cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Visit Green Cart",
+              "fullTitle": "Green Cart Visit Green Cart",
+              "timedOut": null,
+              "duration": 4911,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.viewport(1920, 1080);\ncy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/\");\ncy.get('.search-keyword').type('ca');\ncy.wait(3000);\n// Step 1 : click on ADD TO CART\ncy.get('.products').as('productLocator');\ncy.get('@productLocator').find('.product').each(function ($el, index, $list) {\n  var textVeg = $el.find('h4.product-name').text();\n  if (textVeg.includes('Cashews')) {\n    cy.wrap($el).find('button').click();\n  }\n});\n// Step 2 : Click on Cart Icon\ncy.get('.cart-icon > img').click();\n// Step 3 : Click on Proceed to Checkout Button\n// cy.get('.cart-preview > .action-block > button').click();\ncy.contains('PROCEED TO CHECKOUT').click();\n// Step 4 : Click on Place Order\n// cy.get('[style=\"text-align: right; width: 100%; margin-top: 20px; margin-right: 10px;\"] > :nth-child(14)').click();\ncy.contains('Place Order').click();\n// Assertions\ncy.get('.brand').should('have.text', 'GREENKART');\n// You have to handle promises by your own when you are using any non-cypress command like text();\ncy.get('.brand').then(function (logoElement) {\n  cy.log(logoElement.text());\n});",
+              "err": {},
+              "uuid": "0606cff8-6916-4cc6-9fea-f4ac3398998a",
+              "parentUUID": "322391e1-3689-4fcc-a49f-112735d42cd8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "0606cff8-6916-4cc6-9fea-f4ac3398998a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4911,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

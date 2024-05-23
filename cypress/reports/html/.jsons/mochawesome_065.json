@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T08:11:22.116Z",
+    "end": "2024-05-22T08:11:24.110Z",
+    "duration": 1994,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "00718954-b774-4c96-b77a-a40386df9a26",
+      "title": "",
+      "fullFile": "cypress/integration/examples/fakeTest.js",
+      "file": "cypress/integration/examples/fakeTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "31121f81-914c-4a6b-8c62-13741646d497",
+          "title": "Mock http test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Mock https requests",
+              "fullTitle": "Mock http test suite Mock https requests",
+              "timedOut": null,
+              "duration": 569,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/fakeTest.js\"\n}",
+              "code": "cy.visit('https://rahulshettyacademy.com/angularAppdemo/');\ncy.intercept({\n  // REQUEST BODY monitoring only\n  method: 'GET',\n  url: 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty'\n}, {\n  // RESPONSE BODY\n  statusCode: 200,\n  body: [{\n    book_name: \"RestAssured with Java\",\n    isbn: \"BSG\",\n    aisle: \"2302\"\n  }]\n}).as('bookretrievals');\ncy.get('button[class=\"btn btn-primary\"]').click();\n// Length of response array == rows of the table\ncy.wait('@bookretrievals').then(function (_ref) {\n  var request = _ref.request,\n    response = _ref.response;\n  cy.get('tr').should('have.length', response.body.length + 1);\n});\ncy.get('p').should('have.text', 'Oops only 1 Book available');",
+              "err": {},
+              "uuid": "079ac8fa-91d9-474f-bcb6-4b99439c1611",
+              "parentUUID": "31121f81-914c-4a6b-8c62-13741646d497",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "079ac8fa-91d9-474f-bcb6-4b99439c1611"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 569,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

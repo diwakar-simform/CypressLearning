@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T08:10:17.774Z",
+    "end": "2024-05-22T08:10:19.769Z",
+    "duration": 1995,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "54dee486-9170-4f0a-8f4d-f52d79300371",
+      "title": "",
+      "fullFile": "cypress/integration/CypressByRahil/test5.js",
+      "file": "cypress/integration/CypressByRahil/test5.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6d9cfb4-f222-4b5a-8ac6-0388c04826bb",
+          "title": "env & baseUrl test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "env test case",
+              "fullTitle": "env & baseUrl test suite env test case",
+              "timedOut": null,
+              "duration": 56,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/CypressByRahil/test5.js\"\n}",
+              "code": "cy.log(Cypress.env('url'));",
+              "err": {},
+              "uuid": "19bb2c2f-d837-4e41-b04e-00ad54975ae5",
+              "parentUUID": "d6d9cfb4-f222-4b5a-8ac6-0388c04826bb",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "baseUrl test case",
+              "fullTitle": "env & baseUrl test suite baseUrl test case",
+              "timedOut": null,
+              "duration": 1861,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/CypressByRahil/test5.js\"\n}",
+              "code": "cy.visit('/selenium-playground/');",
+              "err": {},
+              "uuid": "c11d4592-0b12-4a00-8b09-e419f3b0ca95",
+              "parentUUID": "d6d9cfb4-f222-4b5a-8ac6-0388c04826bb",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "19bb2c2f-d837-4e41-b04e-00ad54975ae5",
+            "c11d4592-0b12-4a00-8b09-e419f3b0ca95"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1917,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

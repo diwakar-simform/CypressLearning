@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T08:05:07.289Z",
+    "end": "2024-05-22T08:05:08.974Z",
+    "duration": 1685,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2ea52e70-be74-4150-923f-3deb9c004a20",
+      "title": "",
+      "fullFile": "cypress/integration/examples/fakeTest2.js",
+      "file": "cypress/integration/examples/fakeTest2.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e6304077-abb4-4122-9f09-9ee6653bf206",
+          "title": "Modify http Request test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Modify Http Request",
+              "fullTitle": "Modify http Request test suite Modify Http Request",
+              "timedOut": null,
+              "duration": 411,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://rahulshettyacademy.com/angularAppdemo/');\n// First recieving the request\ncy.intercept('GET', 'https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=shetty',\n// When request recieved modify your request\nfunction (req) {\n  req.url = \"https://rahulshettyacademy.com/Library/GetBook.php?AuthorName=malhotra\";\n  // then with the help of continue() now again send back request with new url and check status code\n  req[\"continue\"](function (res) {\n    // expect(res.statusCode).to.equal(403);\n  });\n}).as('dummyUrl');\ncy.get('button[class=\"btn btn-primary\"]').click();\ncy.wait('@dummyUrl');",
+              "err": {},
+              "uuid": "761ac04a-8d62-45cf-b0cc-da35a02007d2",
+              "parentUUID": "e6304077-abb4-4122-9f09-9ee6653bf206",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "761ac04a-8d62-45cf-b0cc-da35a02007d2"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 411,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

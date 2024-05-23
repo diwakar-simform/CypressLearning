@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T07:07:37.095Z",
+    "end": "2024-05-22T07:07:39.743Z",
+    "duration": 2648,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "96b6e913-d511-44d3-8664-a137a0a78554",
+      "title": "",
+      "fullFile": "cypress/integration/examples/calendar.js",
+      "file": "cypress/integration/examples/calendar.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f9a3bda6-d9c3-470d-aa9d-91ec112c4a3b",
+          "title": "Calendar Testing",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify Date Selection",
+              "fullTitle": "Calendar Testing Verify Date Selection",
+              "timedOut": null,
+              "duration": 1154,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://rahulshettyacademy.com/seleniumPractise/#/offers\");\n// My Requirement\nvar dateNumber = \"15\";\nvar monthNumber = \"6\";\nvar yearNumber = \"2027\";\nvar expectedList = [monthNumber, dateNumber, yearNumber];\n// Solution Steps\ncy.get('.react-date-picker__calendar-button').click(); // Click on icon to get the Calendar open\ncy.get('.react-calendar__navigation__label').click(); // Click Upper middle section to go back to select month\ncy.get('.react-calendar__navigation__label').click(); // Click again upper middle section to go back to select year\n// cy.get('.react-calendar_tile').then((el)=>{\n//     cy.log(el.text());\n// })\ncy.contains(\"button\", yearNumber).click();\ncy.get('.react-calendar__year-view__months__month').eq(monthNumber - 1).click();\ncy.contains('abbr', dateNumber).click();\ncy.get('.react-date-picker__inputGroup__input').each(function (element, index) {\n  cy.wrap(element).invoke('val').should('eq', expectedList[index]);\n});",
+              "err": {},
+              "uuid": "b6c5ca02-146c-4701-83b1-b918faf58c24",
+              "parentUUID": "f9a3bda6-d9c3-470d-aa9d-91ec112c4a3b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b6c5ca02-146c-4701-83b1-b918faf58c24"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1154,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T08:12:20.735Z",
+    "end": "2024-05-22T08:12:23.226Z",
+    "duration": 2491,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "334b4cc0-a29d-4f85-9db0-f94ada269591",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test4.js",
+      "file": "cypress/integration/examples/test4.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de8ac365-1bbb-4776-a306-54ac2e82ae6a",
+          "title": "Automation Practice",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Alert",
+              "fullTitle": "Automation Practice Alert",
+              "timedOut": null,
+              "duration": 1108,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress/integration/examples/test4.js\"\n}",
+              "code": "cy.viewport(1920, 1080);\ncy.visit(\"https://rahulshettyacademy.com/AutomationPractice/\");\n// Unique Quality of Cypress : Cypress can take over the control of your dom and give direction to your browser by manuplating your code\n// Whereas selenium can not do such things\n// Note : Entire our testing is running on MOCHA test framework\n// Cypress automatically handles alert and confirm by cliking on OK.\ncy.get('#alertbtn').click();\ncy.get('#confirmbtn').click();\ncy.on('window:alert', function (str) {\n  // MOCHA\n  expect(str).to.equal('Hello , share this practice page and share your knowledge');\n});\ncy.on('window:confirm', function (str) {\n  // MOCHA\n  expect(str).to.equal('Hello , Are you sure you want to confirm?');\n});\n// SCOPE of cypress will be in the same tab : the url that you have provided in cy.visit();\n// If you are able to open the new tab in the current page itself then you are good to go.",
+              "err": {},
+              "uuid": "903a380d-8c86-400c-98e4-b7ebf6ae3d64",
+              "parentUUID": "de8ac365-1bbb-4776-a306-54ac2e82ae6a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "903a380d-8c86-400c-98e4-b7ebf6ae3d64"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1108,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

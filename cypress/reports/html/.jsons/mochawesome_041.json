@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T08:05:10.510Z",
+    "end": "2024-05-22T08:05:19.809Z",
+    "duration": 9299,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "871781a5-2066-4de4-9a36-b2f82a884ce3",
+      "title": "",
+      "fullFile": "cypress/integration/examples/sessionTest.js",
+      "file": "cypress/integration/examples/sessionTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "85fc2c51-fe5e-4df4-ad7e-4ad4b508851c",
+          "title": "JWT session",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "is logged in through local storage",
+              "fullTitle": "JWT session is logged in through local storage",
+              "timedOut": null,
+              "duration": 7753,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// You have to manually resolve the promise for your custom commands\ncy.LoginAPI().then(function () {\n  cy.visit('https://rahulshettyacademy.com/client/', {\n    onBeforeLoad: function onBeforeLoad(window) {\n      window.localStorage.setItem('token', Cypress.env('token'));\n    }\n  });\n});\ncy.get(\".card-body b\").eq(1).then(function (ele) {\n  productName = ele.text();\n});\n// End to End Place an order\ncy.get('.card-body button:last-of-type').eq(1).click(); // click on add to cart button\ncy.get('[routerlink$=\"/dashboard/cart\"]').click();\ncy.contains('Checkout').click();\n// const selectCntry = \" India\";\ncy.get('[placeholder$=\"Select Country\"]').type(\"ind\");\ncy.wait(3000); // wait to load every options\ncy.get('.ta-results button').each(function (element, index, list) {\n  // const cntryName = element.text();\n  if (element.text() === \" India\") {\n    cy.wrap(element).click();\n  }\n});\ncy.get('.btnn').click({\n  force: true\n});\ncy.wait(2000); // add wait time just to make sure that each and every details are first loaded\ncy.contains('Click To Download Order Details in CSV').click();\n// Cypress.config(\"fileServerFolder\"); // this fileServerFolder object will give you the path of your project\ncy.readFile(Cypress.config(\"fileServerFolder\") + '/cypress/downloads/order-invoice_anerrtest.csv').then( /*#__PURE__*/function () {\n  var _ref = (0, _asyncToGenerator2[\"default\"])( /*#__PURE__*/_index[\"default\"].mark(function _callee(text) {\n    var csv, actualProductName;\n    return _index[\"default\"].wrap(function _callee$(_context) {\n      while (1) switch (_context.prev = _context.next) {\n        case 0:\n          _context.next = 2;\n          return neatCSV(text);\n        case 2:\n          csv = _context.sent;\n          console.log(csv);\n          cy.log(csv);\n          actualProductName = csv[0][\"Product Name\"];\n          expect(productName).to.equal(actualProductName);\n        case 7:\n        case \"end\":\n          return _context.stop();\n      }\n    }, _callee);\n  }));\n  return function (_x) {\n    return _ref.apply(this, arguments);\n  };\n}());",
+              "err": {},
+              "uuid": "1b3f28ee-7c87-43a9-9c8d-45dd545ea956",
+              "parentUUID": "85fc2c51-fe5e-4df4-ad7e-4ad4b508851c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1b3f28ee-7c87-43a9-9c8d-45dd545ea956"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7753,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

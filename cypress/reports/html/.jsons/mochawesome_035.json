@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T08:04:36.456Z",
+    "end": "2024-05-22T08:04:45.078Z",
+    "duration": 8622,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d3d820e3-3a6c-412c-8b49-77bc4627f90f",
+      "title": "",
+      "fullFile": "cypress/integration/examples/TestFramework.js",
+      "file": "cypress/integration/examples/TestFramework.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bbbed96b-8ee5-43cd-b45c-d4503152a456",
+          "title": "Ecommerce",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "proto",
+              "fullTitle": "Ecommerce proto",
+              "timedOut": null,
+              "duration": 7188,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var homePage = new _HomePage[\"default\"]();\n// cy.log(Cypress.env('url'));\ncy.visit(Cypress.env('url') + '/angularpractice/');\nhomePage.getNameField().type(this.data.name); // replacement of below written code\n// cy.get(':nth-child(1) > .form-control').type(this.data.name);\nhomePage.getGender().select(this.data.gender);\n// Assertions\nhomePage.getTwoWayDataBinding().should('have.value', this.data.name);\nhomePage.getNameField().should('have.attr', 'minLength', '2');\n// cy.pause();\nhomePage.getEntrepreneur().should('be.disabled');\n// cy.get('#inlineRadio3').should('be.disabled').debug();\nhomePage.getShop().click();\n// cy.get('h4.card-title').each( function(element, index, list) {\n//     if (element.text().includes('Blackberry')) {\n//         cy.get('button.btn.btn-info').eq(index).click();\n//     }\n// })\n// cy.selectProduct('Blackberry');\n// cy.selectProduct('Nokia Edge');\nthis.data.productName.forEach(function (product) {\n  cy.selectProduct(product);\n});\nvar productPage = new _ProductPage[\"default\"]();\nvar countryName = \"United States of America\";\nproductPage.getCheckoutButton().click();\nvar sum = 0;\nproductPage.getTotalPrice().each(function (element, index, list) {\n  var totalPrice = element.text();\n  var res = totalPrice.split(\" \");\n  res = res[1].trim();\n  sum = sum + Number(res);\n  cy.log(sum);\n}).then(function () {\n  cy.log(sum);\n  var finalSum = \"₹. \";\n  finalSum = finalSum + sum;\n  cy.get('td[class=\"text-right\"] h3 strong').should('have.text', finalSum);\n});\ncy.get('td[class=\"text-right\"] h3 strong').then(function (element) {\n  var finalPrice = element.text();\n  var result = finalPrice.split(\" \");\n  result = result[1].trim();\n  expect(Number(result)).to.be.equal(sum);\n});\nproductPage.getCheckout().click();\nproductPage.getCountryInputField().type(countryName);\n// Cypress.config('defaultCommandTimeout',8000);\nCypress.config('defaultCommandTimeout', 8000); // spec level \n// cy.wait(5000);\nproductPage.getSuggestions().contains(countryName).click();\nproductPage.getCheckBox().check({\n  force: true\n});\nproductPage.getPurchase().click();\nproductPage.getOrderSuccessMsg().then(function (message) {\n  var successMessage = message.text();\n  expect(successMessage.includes('Success')).to.be[\"true\"];\n});",
+              "err": {},
+              "uuid": "910fd625-4507-4441-a866-8e6c145dcb53",
+              "parentUUID": "bbbed96b-8ee5-43cd-b45c-d4503152a456",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "910fd625-4507-4441-a866-8e6c145dcb53"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7188,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

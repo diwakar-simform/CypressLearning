@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-22T08:06:22.962Z",
+    "end": "2024-05-22T08:06:26.693Z",
+    "duration": 3731,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2c36af2d-c283-4d53-85ff-bf75cbb3f95f",
+      "title": "",
+      "fullFile": "cypress/integration/examples/upload-download.js",
+      "file": "cypress/integration/examples/upload-download.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9e30e19b-f68f-4bc8-a1b7-bde65baa97c2",
+          "title": "upload-download test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify excel upload-download",
+              "fullTitle": "upload-download test suite verify excel upload-download",
+              "timedOut": null,
+              "duration": 2124,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var replaceText = 399;\ncy.visit('https://rahulshettyacademy.com/upload-download-test/index.html');\ncy.get('#downloadButton').click();\nvar path = Cypress.config(\"fileServerFolder\") + '/cypress/downloads/download.xlsx';\ncy.task('writeExcel', {\n  searchText: \"Apple\",\n  setValue: replaceText,\n  change: {\n    rowChange: 0,\n    colChange: 2\n  },\n  filePath: path\n});\ncy.get('#fileinput').selectFile(path);\ncy.contains('Apple').parent().parent().find('#cell-4-undefined').should('have.text', replaceText);",
+              "err": {},
+              "uuid": "d98909ef-2309-42c2-8ea2-d8159d7a13c8",
+              "parentUUID": "9e30e19b-f68f-4bc8-a1b7-bde65baa97c2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d98909ef-2309-42c2-8ea2-d8159d7a13c8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2124,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -4,7 +4,7 @@ describe('selenium-playground', function() {
     
 
         cy.wait(2000);
-        cy.reload();
+        cy.reload(); // is used to reload your 
         cy.wait(2000);
         cy.log(cy.title());
         cy.title().then(function(webTitle) {
@@ -17,7 +17,7 @@ describe('selenium-playground', function() {
         // Note: You can not use cy.find() directly and we can use this find as much as we can
         cy.get('h4.title').first().find('a').then(function(txt) {
             cy.log(txt.text());
-        });
+        }); 
 
         // we can use eq(1) to get the particul element : eq()
         // should is assertions
