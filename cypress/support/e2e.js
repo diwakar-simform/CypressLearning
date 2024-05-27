@@ -22,3 +22,7 @@ import 'cypress-file-upload';
 // require('./commands')
 
 import 'cypress-mochawesome-reporter/register';
+import '@shelex/cypress-allure-plugin';
+// import '@cypress/webpack-preprocessor';
+
+

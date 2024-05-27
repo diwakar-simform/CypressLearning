@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-05-23T06:55:50.734Z",
+    "end": "2024-05-23T06:55:53.935Z",
+    "duration": 3201,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2c9b285b-c870-45aa-9fa7-9a2046b21250",
+      "title": "",
+      "fullFile": "cypress/integration/CypressByRahil/test6.js",
+      "file": "cypress/integration/CypressByRahil/test6.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a0d38e72-89f8-4652-9ccd-cc31216f3568",
+          "title": "popups & alerts test suite",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "popups and alerts test case",
+              "fullTitle": "popups & alerts test suite popups and alerts test case",
+              "timedOut": null,
+              "duration": 788,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// this is how we handle uncaught:exception\ncy.on('uncaught:exception', function () {\n  return false;\n});\ncy.visit('https://testpages.herokuapp.com/styled/alerts/alert-test.html');\ncy.get('#alertexamples').click();\ncy.on('window:alert', function (res) {\n  expect(res).to.contains('I am an alert box');\n});\ncy.get('#confirmexample').click();\ncy.on('window:confirm', function (res) {\n  expect(res).to.contains('I am a confirm alert');\n});\ncy.get('#promptexample').click();",
+              "err": {},
+              "uuid": "98d36243-1526-4115-9bd6-bdf12837d5ae",
+              "parentUUID": "a0d38e72-89f8-4652-9ccd-cc31216f3568",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "98d36243-1526-4115-9bd6-bdf12837d5ae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 788,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "inlineAssets": true,
+        "saveAllAttempts": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

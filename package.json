@@ -9,7 +9,8 @@
     "recordDashboardTest": "npx cypress run --record --key 878ba00f-2c80-4794-946b-0c57444d7e03",
     "chromeTest": "npx run test --browser chrome",
     "GreenKartTest": "npx cypress run --spec \"cypress/integration/GreenKart/*\" ",
-    "smokeTest": "npx cypress run --spec \"cypress/integration/GreenKart/test1.js\" "
+    "smokeTest": "npx cypress run --spec \"cypress/integration/GreenKart/test1.js\" ",
+    "cy:run": "npx cypress run --spec /home/diwakar@simform.dom/Downloads/cypress-test/cypress/integration/CypressByRahil/test6.js --env allure=true"
   },
   "cypress-cucumber-preprocessor": {
     "json": {
@@ -20,16 +21,27 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@cypress/webpack-preprocessor": "^6.0.1",
+    "@shelex/cypress-allure-plugin": "^2.40.2",
+    "@swc/core": "^1.5.7",
+    "babel-loader": "^9.1.3",
     "cypress": "^13.8.1",
     "cypress-iframe": "^1.0.1",
     "cypress-mochawesome-reporter": "^3.8.2",
     "exceljs": "^4.4.0",
+    "jest-worker": "^27.5.1",
     "multiple-cucumber-html-reporter": "^3.6.2",
-    "neat-csv": "5.1.0"
+    "neat-csv": "5.1.0",
+    "terser-webpack-plugin": "^5.3.10",
+    "uglify-js": "^3.17.4",
+    "webpack": "^5.91.0"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.5",
     "@cypress/browserify-preprocessor": "^3.0.2",
+    "allure-commandline": "^2.29.0",
     "convert-excel-to-json": "^1.7.0",
     "cypress-file-upload": "^5.0.8"
   }
